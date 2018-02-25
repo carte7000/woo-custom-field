@@ -284,7 +284,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		
 			global $product;
 			
-			$pro_type = $product->product_type;
+			$pro_type = $product->get_type();
 		
 			if($pro_type === 'variable' && $woo_var_option_plugin ==1)
 			{
