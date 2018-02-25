@@ -339,18 +339,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				// 	$the_product = $product;
 					
 				// }
+				$display_price    = '';
 
-				if ( is_object( $the_product ) ) {
+				// if ( is_object( $the_product ) ) {
 					
-					$tax_display_mode = get_option( 'woocommerce_tax_display_shop' );
+				// 	$tax_display_mode = get_option( 'woocommerce_tax_display_shop' );
 					
-					$display_price    = $tax_display_mode == 'incl' ? $the_product->wc_get_price_including_tax() : $the_product->wc_get_price_excluding_tax();
+				// 	// $display_price    = $tax_display_mode == 'incl' ? $the_product->wc_get_price_including_tax() : $the_product->wc_get_price_excluding_tax();
 				
-				} else {
+				// } else {
 					
-					$display_price    = '';
 					
-				}
+				// }
 
 				echo '<div id="product-options-var-total" product-type="' . $the_product->get_type() . '" product-price="' . $display_price . '"></div>';
 				
