@@ -344,7 +344,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					
 					$tax_display_mode = get_option( 'woocommerce_tax_display_shop' );
 					
-					$display_price    = $tax_display_mode == 'incl' ? $the_product->get_price_including_tax() : $the_product->get_price_excluding_tax();
+					$display_price    = $tax_display_mode == 'incl' ? $the_product->wc_get_price_including_tax() : $the_product->wc_get_price_excluding_tax();
 				
 				} else {
 					
@@ -352,7 +352,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					
 				}
 
-				echo '<div id="product-options-var-total" product-type="' . $the_product->product_type . '" product-price="' . $display_price . '"></div>';
+				echo '<div id="product-options-var-total" product-type="' . $the_product->get_type() . '" product-price="' . $display_price . '"></div>';
 				
 			}
 			 
