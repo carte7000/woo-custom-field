@@ -329,16 +329,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					}
 					   
 				}
-				
-				if ( ! isset( $product ) || $product->get_id() != get_the_ID() ) {
+				$the_product = $product;
+				// if ( ! isset( $product ) || $product->get_id() != get_the_ID() ) {
 					
-					$the_product = get_product( get_the_ID() );
+				// 	$the_product = get_product( get_the_ID() );
 					
-				} else {
+				// } else {
 					
-					$the_product = $product;
+				// 	$the_product = $product;
 					
-				}
+				// }
 
 				if ( is_object( $the_product ) ) {
 					
