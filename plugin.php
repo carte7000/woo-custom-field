@@ -330,7 +330,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					   
 				}
 				
-				if ( ! isset( $product ) || $product->id != get_the_ID() ) {
+				if ( ! isset( $product ) || $product->get_id() != get_the_ID() ) {
 					
 					$the_product = get_product( get_the_ID() );
 					
