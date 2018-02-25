@@ -1,4 +1,8 @@
 {
     "name": "carte7000/woo-custom-fields-for-varation",
-    "description": "test"
+    "description": "test",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
 }
